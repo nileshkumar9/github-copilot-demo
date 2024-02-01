@@ -28,8 +28,8 @@ pipeline {
     success {
       withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
         sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-        sh "docker push nilesh35apiit/github-copilot-demo:${env.BUILD_ID}"
-        sh "docker push nilesh35apiit/github-copilot-demo:latest"
+        sh "docker push nileshkumar9/github-copilot-demo:${env.BUILD_ID}"
+        sh "docker push nileshkumar9/github-copilot-demo:latest"
       }
     }
   }
